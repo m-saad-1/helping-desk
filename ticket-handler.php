@@ -235,7 +235,7 @@ function handleUserTicketList() {
     $priority = $_GET['priority'] ?? 'all';
     $search = $_GET['search'] ?? '';
     
-    // Modified query to show all tickets, not just user's tickets
+    // Query to show all tickets
     $query = "SELECT t.*, u.name as user_name FROM tickets t 
               JOIN users u ON t.user_id = u.id WHERE 1=1";
     
